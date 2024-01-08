@@ -1,10 +1,35 @@
 <html>
     <head>
         <title> Mi primer proyecto</title>
-        
         <body>
-            <img src="mdn-logo-sm.png" alt="MDN" />
-           <div> dedede</div>
-        </body>
+        <h1 style="text-align: center;">Máquina de Helados</h1>
+<p style="text-align:center;">Seleccione los porcentajes para preparar un helado a su gusto.</p>
+<form action="helado.jsp">
+<div class="contenedor">
+    <div class="sabor">
+        <img src="img/chocolate.jpg" width="200px"><br>
+        chocolate
+        <input type="number" value="0" min="0" max="100" name="chocolate">%
+    </div>
+
+    <div class="sabor">
+        <img src="img/fresa.jpg" width="200px"><br>
+        Fresa
+        <input type="number" value="0" min="0" max="100" name="fresa">%
+    </div>
+
+    <div class="sabor">
+        <img src="img/vainilla.jpg" width="200px"><br>
+        Vanilla
+        <input type="number" value="0" min="0" max="100" name="vainilla">%
+    </div>
+    <div class="contenedor">
+<input type="submit" value="Preparar helado">
+    
+    </div>
+</div>
+</form>
+
+</body>
     </head>
 </html>
