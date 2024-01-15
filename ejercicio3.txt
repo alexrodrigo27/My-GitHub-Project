@@ -1,0 +1,41 @@
+Ejercicio3.1
+cd libro
+git branch bibliografia
+git branch
+
+Ejercicio3.2
+echo "Texto del capítulo 4" > capitulos/capitulo4.txt
+git add capitulos/capitulo4.txt
+git commit -m "Añadido capítulo 4"
+git log --all --graph --decorate
+
+Ejercicio 3.3
+git checkout bibliografia
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadida primera referencia bibliográfica"
+git log --all --graph --decorate
+
+Ejercicio 3.4
+git checkout master
+git merge bibliografia
+git log --all --graph --decorate
+git branch -d bibliografia
+git log --all --graph --decorate
+
+Ejercicio 3.5
+git branch bibliografia
+git checkout bibliografia
+echo "Scott Chacon and Ben Straub. Pro Git. Apress." > bibliografia.txt
+echo "Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)" >> bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadida nueva referencia bibliográfica"
+git checkout master
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+echo "Loeliger, J. and McCullough, M. Version control with Git. O’Reilly." >> bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadida nueva referencia bibliográfica"
+git merge bibliografia
+git add bibliografia.txt
+git commit -m "Resuelto conflicto de bibliografía"
+git log --all --graph --decorate
