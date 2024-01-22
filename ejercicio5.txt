@@ -1,0 +1,59 @@
+EJERCICIO1
+sed -i '$ d' indice.txt
+git status
+git checkout -- indice.txt
+git checkout -- indice.txt
+
+EJERCICIO2
+sed -i '$ d' indice.txt
+git add indice.txt
+git status
+git restore --staged indice.txt
+git status
+git checkout -- indice.txt
+git status
+
+EJERCICIO3
+sed -i '$ d' indice.txt
+rm capitulos/capitulo3.txt
+touch capitulos/capitulo4.txt
+git add .
+git status
+git restore --staged .
+git status
+git checkout -- .
+git status
+
+EJERCICIO4
+sed -i '$ d' indice.txt
+rm capitulos/capitulo3.txt
+git add .
+git commit -m "Borrado accidental."
+git log
+git reset --soft HEAD^
+git log
+git status
+git commit -c ORIG_HEAD
+git reset --hard HEAD^
+git log
+git status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
